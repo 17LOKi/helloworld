@@ -1,9 +1,15 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+import unittest
 
-driver=webdriver.Chrome()
-driver.get("https://www.google.com/")
-driver.maximize_window()
+class Testcase(unittest.TestCase):
+    def setUp(self):
+        print("this is  fomr the setup part")
 
-import time
-time.sleep(10)
+    def testcase(self):
+        print('this is from test ')
+    
+    def tearDown(self):
+        print('this is form teardown')
+
+
+if __name__=="__main__":
+    unittest.main()
