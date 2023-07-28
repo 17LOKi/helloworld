@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('version') {
       steps {
-        sh 'python3 --version'
+        sh 'python3 jenkinspy.py'
       }
     }
     stage('hello') {
